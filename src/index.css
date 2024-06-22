@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+.violet {
+  color: #9580ff;
+}
+
+.green {
+  color: #8aff80
+}
+
+.pink {
+  color: #ff80bf
+}
+
+.yellow {
+  color: #ffff80
+}
+
+.orange {
+  color:#ff9580
+}
+
+.code-container {
+  display: inline-flex;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #383838;
+  border: 1px solid #464646;
+  border-radius: 5px;
+}
