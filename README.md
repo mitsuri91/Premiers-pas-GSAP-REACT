@@ -60,7 +60,7 @@ ou cette methode avec des eventListener
   );
 ```
 
-### Méthodes de GSAP
+## Méthodes de GSAP
 
 Voici un aperçu des principales méthodes de GSAP utilisées dans ce projet :
 
@@ -69,9 +69,6 @@ Voici un aperçu des principales méthodes de GSAP utilisées dans ce projet :
 ```javasript
 gsap.to(target, { duration: 1, x: 100 });
 ```
-target : Sélecteur ou référence de l'élément à animer.  
-duration : Durée de l'animation en secondes.  
-x : Propriété à animer (dans ce cas, la position X).
 
 **gsap.from()** : Anime un élément d'un état initial spécifié à son état actuel.
 
@@ -89,15 +86,16 @@ gsap.fromTo(target, { x: -100 }, { duration: 1, x: 100 });
 gsap.set(target, { x: 100 });
 ```
 
-Les méthodes de GSAP (gsap.to, gsap.from, gsap.fromTo, gsap.set) prennent deux arguments 
+Les méthodes de GSAP (gsap.to, gsap.from, gsap.fromTo, gsap.set) prennent deux arguments :
 
-#### La Cible (target)
+### La Cible (target)
 
 La cible est le premier argument de ces méthodes. Elle peut être un sélecteur CSS, un élément DOM, une référence à un élément, ou un tableau d'éléments. GSAP utilise cette cible pour identifier quel élément doit être animé.
 
-##### Options Courantes dans l'Objet de Configuration
+### L'Objet de Configuration
 
 le second argument est un objet de configuration pour spécifier les propriétés et les valeurs à animer, il peut inclure de nombreuses propriétés.  
+
 Voici quelques-unes des plus courantes :
 
 **duration** : La durée de l'animation en secondes.  
