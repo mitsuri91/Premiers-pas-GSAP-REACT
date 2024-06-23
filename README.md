@@ -121,3 +121,5 @@ Voici quelques-unes des plus courantes :
 
 
 le plus facile pour apprendre c'est de pratiquer ! Alors lance toi et regarde le fichier Exercices.md
+
+
