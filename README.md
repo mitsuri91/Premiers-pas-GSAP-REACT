@@ -25,39 +25,51 @@ Le hook useGSAP() est un remplacement de useEffect() dans React, qui simplifie l
 deux façon de l'utilser :
 
 ```javascript
+import { useRef } from 'react';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+const MyComponent = () => {
 
 const container = useRef();
 
-useGSAP(
-    () => {
-        gsap.to('.good', { x: 100 });
-    },
-    { scope: container }
-);
-
-return (
-    <div ref={container}>
-        <div className="good"></div>
-    </div>
-);
-```
-
-ou cette methode avec des eventListener
-
-```javascript
- const { contextSafe } = useGSAP();
-  
-  const onEnter = contextSafe(({ event }) => {
-    gsap.to(event, { rotation: "+=360" });
-  });
+    useGSAP(
+        () => {
+                gsap.to('.target', { x: 100 });
+        },[],//Le tableaux est vide , l'animation se joue a chaque rechargement de la page , ajoute un state dans le tableau si tu veux que l'animation joue a chaque changement d'etat.
+        { scope: container }
+    );
 
     return (
-    <div className="app flex-row">
-      <div className="box gradient-blue" onClick={onEnter}>
-        Click Me
-      </div>
-    </div>
-  );
+        <div ref={container}>
+            <div className="target">Click Me</div>
+        </div>
+    );
+};    
+```
+
+ou cette methode avec un handler 
+
+```javascript
+import { useRef } from 'react';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+const MyComponent = () => {
+    const container = useRef();
+
+    const { contextSafe } = useGSAP({ scope: container });
+  
+    const handleClick = contextSafe(() => {
+        gsap.to(".target", { rotation: "+=360" }); 
+    });
+
+    return (
+        <div ref={container}>
+            <button onClick={handleClick} className="target"></button>
+        </div>
+    );
+};
 ```
 
 ## Méthodes de GSAP
@@ -95,16 +107,17 @@ La cible est le premier argument de ces méthodes. Elle peut être un sélecteur
 ### L'Objet de Configuration
 
 le second argument est un objet de configuration pour spécifier les propriétés et les valeurs à animer, il peut inclure de nombreuses propriétés.  
+Les propiétés sont écrite en "camelCase", exemple background-color devient backgroundColor, leurs valeurs est de type string si ce n'est pas uniquement un chiffre.
 
 Voici quelques-unes des plus courantes :
 
-**duration** : La durée de l'animation en secondes.  
-**x, y** : Les positions horizontale et verticale de l'élément.  
-**opacity** : La transparence de l'élément (de 0 à 1).  
-**rotation** : La rotation de l'élément en degrés.  
-**scale** : L'échelle de l'élément.  
-**backgroundColor**  : La couleur de fond de l'élément.
-**ease** : Le type d'accélération/décélération de l'animation.
-**stagger** : Décalage entre le début de chaque animation pour les sélections multiples.
-**delay** : Le délai avant le début de l'animation.
-**clearProps** : Réinitialise les propriétés CSS spécifiées après l'animation.
+**duration** : 1, La durée de l'animation en secondes.  
+**x, y** : 100, Les positions horizontale et verticale de l'élément.  
+**opacity** : 0.5, La transparence de l'élément (de 0 à 1).  
+**rotation** : 360, La rotation de l'élément en degrés.  
+**scale** : 2, L'échelle de l'élément.  
+**backgroundColor** : "vert", La couleur de fond de l'élément.  
+**delay** : 3, Le délai avant le début de l'animation.  
+
+
+le plus facile pour apprendre c'est de pratiquer ! Alors lance toi et regarde le fichier Exercices.md
