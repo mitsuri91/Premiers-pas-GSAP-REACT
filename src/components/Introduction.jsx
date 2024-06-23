@@ -3,9 +3,10 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useState ,useRef} from "react";
 import pirate from "../assets/pirateChicken.png"
+import shadow from "../assets/pirateShadow.png"
 
 function Introduction(){
-    const [method,setMethod] = useState("to")
+    const [method,setMethod] = useState("from")
     const intro = useRef()
 
     const handleMethodChange = (event) => {
@@ -21,16 +22,16 @@ function Introduction(){
             case 'to':
                 gsap.to(target, { duration: 1, x: `50vw` });
                 break;
-              case 'from':
+            case 'from':
                 gsap.from(target, { duration: 1, x: `50vw` });
                 break;
-              case 'fromTo':
+            case 'fromTo':
                 gsap.fromTo(target, { x: 0, rotation: 0 }, { duration: 1, x: `50vw` });
                 break;
-              case 'set':
+            case 'set':
                 gsap.set(target, { x: `30vw`});
                 break;
-              default:
+            default:
                 break;
         }
     },[method], {scope : intro })
@@ -61,7 +62,7 @@ function Introduction(){
                     <p>la méthode <span className="violet">gsap</span>.<span className="green">set</span>( ) déplace sans animations à partir des valeurs css d'une <span className="yellow"> "cible"</span> vers ses nouvelles <span className="orange">{`{ valeurs }`}</span> .</p>
                 </label>
             </form>
-            <img src={pirate} alt="pirate" id="pirateOrigin"/>
+            <img src={shadow} alt="pirate" id="pirateOrigin"/>
             <img src={pirate} alt="pirate" id="pirateImg"/>
         </div>
     )

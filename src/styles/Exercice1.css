@@ -1,0 +1,27 @@
+#exercice1 {
+
+    h2 {
+        text-align: center;
+    }
+
+    #rogersBox {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        figure {
+            display: inline-block; 
+            text-align: center; 
+            
+            .roger {
+                width: 40vw;
+                max-width: 400px;
+            }
+
+        }
+
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+}

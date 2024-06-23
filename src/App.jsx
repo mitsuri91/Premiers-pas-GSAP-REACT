@@ -1,4 +1,4 @@
-import './App.css'
+import Exercice1 from './components/Exercice1'
 import Introduction from './components/Introduction'
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <Introduction/>
+      <Exercice1/>
     </>
   )
 }

@@ -29,6 +29,7 @@
     }
 
     #pirateOrigin{
+        scale: 0.998;
         width: 200px;
         position: absolute;
     }

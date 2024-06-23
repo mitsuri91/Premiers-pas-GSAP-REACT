@@ -1,6 +1,6 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.87);
+  color: #ffffffDe;
   background-color: #242424;
 }
 
@@ -12,6 +12,16 @@
 body {
   min-height: 100vh;
   min-width: 320px;
+  overflow-x: hidden;
+}
+
+button {
+  color: #ffffffDe ;
+  border-radius: 15px;
+  background-color: #242424;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  aspect-ratio: 3/0.5;
 }
 
 .violet {
