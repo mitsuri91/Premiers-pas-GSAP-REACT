@@ -88,3 +88,25 @@ gsap.fromTo(target, { x: -100 }, { duration: 1, x: 100 });
 ```javasript
 gsap.set(target, { x: 100 });
 ```
+
+Les méthodes de GSAP (gsap.to, gsap.from, gsap.fromTo, gsap.set) prennent deux arguments 
+
+#### La Cible (target)
+
+La cible est le premier argument de ces méthodes. Elle peut être un sélecteur CSS, un élément DOM, une référence à un élément, ou un tableau d'éléments. GSAP utilise cette cible pour identifier quel élément doit être animé.
+
+##### Options Courantes dans l'Objet de Configuration
+
+le second argument est un objet de configuration pour spécifier les propriétés et les valeurs à animer, il peut inclure de nombreuses propriétés.  
+Voici quelques-unes des plus courantes :
+
+**duration** : La durée de l'animation en secondes.  
+**x, y** : Les positions horizontale et verticale de l'élément.  
+**opacity** : La transparence de l'élément (de 0 à 1).  
+**rotation** : La rotation de l'élément en degrés.  
+**scale** : L'échelle de l'élément.  
+**backgroundColor**  : La couleur de fond de l'élément.
+**ease** : Le type d'accélération/décélération de l'animation.
+**stagger** : Décalage entre le début de chaque animation pour les sélections multiples.
+**delay** : Le délai avant le début de l'animation.
+**clearProps** : Réinitialise les propriétés CSS spécifiées après l'animation.
