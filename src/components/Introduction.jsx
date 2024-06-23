@@ -1,19 +1,19 @@
 import "../styles/Introduction.css"
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useState } from "react";
+import { useState ,useRef} from "react";
 import pirate from "../assets/pirateChicken.png"
 
 function Introduction(){
     const [method,setMethod] = useState("to")
-    const [getCode,setGetCode] = useState("")
+    const intro = useRef()
 
     const handleMethodChange = (event) => {
         setMethod(event.target.value)
     }
 
     useGSAP(() => {
-
+        
         const target = "#pirateImg";
         gsap.set(target, { clearProps: "all" });
 
@@ -33,22 +33,22 @@ function Introduction(){
               default:
                 break;
         }
-    }, [method])
+    },[method], {scope : intro })
 
     return(
-        <div id="introduction">
+        <div id="introduction" ref={intro}>
             <h1>Premiers pas avec GSAP sur React</h1>
             <p><em>Rappel visuel des methodes</em></p>
             <form>
                 <label>
                     <input type="radio" id="to" name="method" value="to" checked={method === 'to'} onChange={handleMethodChange} />
                     <span className="violet">gsap</span>.<span className="green">to</span>(<span className="yellow"> "cible"</span>, <span className="orange">{`{ valeurs }`}</span> )
-                    <p>la méthode <span className="violet">gsap</span>.<span className="green">to</span>( ) commencera l'animation des valeurs css d'une <span className="yellow"> "cible"</span> vers ses nouvelles <span className="orange">{`{ valeurs }`}</span> .</p>
+                    <p>la méthode <span className="violet">gsap</span>.<span className="green">to</span>( ) commencera l'animation à partir des valeurs css d'une <span className="yellow"> "cible"</span> vers ses nouvelles <span className="orange">{`{ valeurs }`}</span> .</p>
                 </label>
                 <label>
                     <input type="radio" id="from" name="method" value="from" checked={method === 'from'} onChange={handleMethodChange} />
                     <span className="violet">gsap</span>.<span className="green">from</span>(<span className="yellow"> "cible"</span>, <span className="orange">{`{ valeurs }`}</span> )
-                    <p>la méthode <span className="violet">gsap</span>.<span className="green">from</span>( ) commencera l'animation des <span className="orange">{`{ valeurs }`}</span>  renseignées vers les valeurs css de la <span className="yellow"> "cible"</span>.</p>
+                    <p>la méthode <span className="violet">gsap</span>.<span className="green">from</span>( ) commencera l'animation à partir des <span className="orange">{`{ valeurs }`}</span>  renseignées vers les valeurs css de la <span className="yellow"> "cible"</span>.</p>
                 </label>
                 <label>
                     <input type="radio" id="fromTo" name="method" value="fromTo" checked={method === 'fromTo'} onChange={handleMethodChange} />
@@ -58,9 +58,10 @@ function Introduction(){
                 <label>
                     <input type="radio" id="set" name="method" value="set" checked={method === 'set'} onChange={handleMethodChange} />
                     <span className="violet">gsap</span>.<span className="green">set</span>(<span className="yellow"> "cible"</span>, <span className="orange">{`{ valeurs }`}</span> )
-                    <p>la méthode <span className="violet">gsap</span>.<span className="green">set</span>( ) déplace sans animations les valeurs css d'une <span className="yellow"> "cible"</span> vers ses nouvelles <span className="orange">{`{ valeurs }`}</span> .</p>
+                    <p>la méthode <span className="violet">gsap</span>.<span className="green">set</span>( ) déplace sans animations à partir des valeurs css d'une <span className="yellow"> "cible"</span> vers ses nouvelles <span className="orange">{`{ valeurs }`}</span> .</p>
                 </label>
             </form>
+            <img src={pirate} alt="pirate" id="pirateOrigin"/>
             <img src={pirate} alt="pirate" id="pirateImg"/>
         </div>
     )

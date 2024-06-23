@@ -1,4 +1,5 @@
 #introduction {
+    position: relative;
     padding: 20px;
 
     h1 {
@@ -27,6 +28,11 @@
         }
     }
 
+    #pirateOrigin{
+        width: 200px;
+        position: absolute;
+    }
+    
     #pirateImg {
         display: block;
         width: 200px;
