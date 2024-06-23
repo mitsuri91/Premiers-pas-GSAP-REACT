@@ -69,8 +69,8 @@ Voici un aperçu des principales méthodes de GSAP utilisées dans ce projet :
 ```javasript
 gsap.to(target, { duration: 1, x: 100 });
 ```
-target : Sélecteur ou référence de l'élément à animer.
-duration : Durée de l'animation en secondes.
+target : Sélecteur ou référence de l'élément à animer.  
+duration : Durée de l'animation en secondes.  
 x : Propriété à animer (dans ce cas, la position X).
 
 **gsap.from()** : Anime un élément d'un état initial spécifié à son état actuel.
