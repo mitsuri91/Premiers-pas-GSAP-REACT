@@ -27,7 +27,7 @@ Anime nos deux Roger , l'un doit être animer a chaque changement d'état et l'a
    - Vérifie que l'animation se déclenche correctement uniquement sur la première figure.
 
 4. **Animation de roger2 :**
-   - roger2 est l'animation qui va jouer uniquement au click , nous allons donc coder toute notre animation dans un handler associé a un contextSafe
+   - roger2 est l'animation qui va jouer uniquement au click , nous allons donc coder toute notre animation dans un handler associé a un contextSafe.  
     nous déstructurons useGsap pour utiliser directement `contextSafe` comme une fonction pour créer des animations ou des gestionnaires d'événements qui respectent le scope défini par `roger2`.
 
    ```javascript  
