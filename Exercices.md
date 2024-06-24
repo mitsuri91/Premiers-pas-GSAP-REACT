@@ -88,3 +88,37 @@ On va donc encore utiliser la magie de `useRef` !
 
    Il y a de nombreuses possibilités de easing et je te laisse les découvrir et les visualiser sur [la doc - GSAP](https://gsap.com/resources/getting-started/Easing).
 
+
+# Exercice 3 :Timeline ! 
+### Objectif :
+Dans le composant `Exercice3`, tu vas utiliser la  méthode `timeline()` pour animer ce cube pour qu'il s'arrête a chaque position prédéfini.
+
+La timeline dans GSAP est un outil puissant pour créer et gérer des séquences d'animations complexes, vous pouvez enchaîner plusieurs animations de manière séquentielle. Chaque animation commence dès que la précédente se termine.
+
+### Instructions :
+
+1. **Initialisation :**
+   - Utilise l'exemple de base fourni comme point de départ.
+   - Importe `gsap` et `useGSAP`.
+
+2. **Animation du cube grâce a la timeline() :**
+    
+    pour initialiser la timeline , insère une constante `tl` qui a pour valeur `gsap.timeline()` dans ton hook GSAP
+    Il te reste plus qu'a faire tes animations en utilisant `tl.` a la place de `gsap.` suivit de la méthode choisit (to,from,fromTo), a noter qu'il n'est pas nécessaire de répéter `tl`
+
+    par default chaque animation jouera a la fin de la précédente et dans l'ordre chronologique de la lecture du code 
+
+    ```javascript  
+    useGSAP(() => {
+        const tl = gsap.timeline()
+
+        tl.to{/*".target"*/,{ /*animation*/}}
+        .to{/*".target"*/,{ /*animation*/}}
+        .to{/*".target"*/,{ /*animation*/}}
+
+        // ton animation
+    }, [/*tableau vide, rien à écouter*/], { scope: /*la ref à surveiller*/ });
+    ```
+
+
+

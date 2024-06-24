@@ -20,7 +20,7 @@ GSAP (GreenSock Animation Platform) est une bibliothèque JavaScript puissante e
 
 ### Qu'est-ce que useGSAP ?
 
-Le hook useGSAP() est un remplacement de useEffect() dans React, qui simplifie l'intégration de GSAP avec React en gérant automatiquement le nettoyage des animations lorsque le composant est démonté.
+Le hook useGSAP() est un remplacement de useEffect() dans React (uniquement pour les animations gsap), qui simplifie l'intégration de GSAP avec React en gérant automatiquement le nettoyage des animations lorsque le composant est démonté.
 
 deux façon de l'utilser :
 

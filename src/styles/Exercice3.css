@@ -1,0 +1,50 @@
+#exercice3{
+    margin: 10vh 0;
+
+    h2 {
+        text-align: center;
+    }
+
+    #stagerBox{
+        min-height: 50vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+
+        & > * {
+            height: 10vh;
+            aspect-ratio: 50/50;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+
+        & > *:nth-child(1) {
+            background-color: #9580ff;
+            left: 10vw;
+        }
+
+        & > *:nth-child(2) {
+            border: 1px dotted #9580ff;
+            left: 30vw;
+            
+        }
+        & > *:nth-child(3) {
+            border: 1px dotted #9580ff;
+            left: 30vw;
+            top: 40vh;
+
+        }
+        & > *:nth-child(4) {
+            border: 1px dotted #9580ff;
+            left: 80vw;
+            top: 40vh;
+        }
+
+
+    }
+}

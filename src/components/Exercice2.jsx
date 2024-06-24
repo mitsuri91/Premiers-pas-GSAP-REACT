@@ -6,11 +6,11 @@ function Exercice2 (){
         <div id="exercice2">
             <h2>Exercice 2</h2>
             <div id="stagerBox">
-                <div className="violet"></div>
-                <div className="green"></div>
-                <div className="pink"></div>
-                <div className="yellow"></div>
-                <div className="orange"></div>
+                <div >1</div>
+                <div >2</div>
+                <div >3</div>
+                <div >4</div>
+                <div >5</div>
             </div>
         </div>
     )
