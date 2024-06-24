@@ -6,7 +6,7 @@ function Exercice3 (){
         <div id="exercice3">
             <h2>Exercice 3</h2>
             <div id="stagerBox">
-                <div ></div>
+                <div className="cube"></div>
                 <div >1</div>
                 <div >2</div>
                 <div >3</div>

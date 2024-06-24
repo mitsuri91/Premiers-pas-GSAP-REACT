@@ -40,4 +40,13 @@
             background-color: #ff9580;
         }
     }
+
+    &::after {
+        content: "";
+        display: flex;
+        margin: 1% auto;
+        height: 1px;
+        width: 80%;
+        background: #747474;
+    }
 }

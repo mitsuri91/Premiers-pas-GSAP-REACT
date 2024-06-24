@@ -24,4 +24,13 @@
             flex-direction: column;
         }
     }
+
+    &::after {
+        content: "";
+        display: flex;
+        margin: 1% auto;
+        height: 1px;
+        width: 80%;
+        background: #747474;
+    }
 }
