@@ -106,8 +106,8 @@ La cible est le premier argument de ces méthodes. Elle peut être un sélecteur
 
 ### L'Objet de Configuration
 
-le second argument est un objet de configuration pour spécifier les propriétés et les valeurs à animer, il peut inclure de nombreuses propriétés.  
-Les propiétés sont écrite en "camelCase", exemple background-color devient backgroundColor, leurs valeurs est de type string si ce n'est pas uniquement un chiffre.
+le second argument est un objet de configuration pour spécifier les propriétés et les valeurs à animer, il peut inclure de nombreuses propriétés (souvent identique à celle du css).  
+Les propriétées sont écrites en "camelCase", exemple background-color devient backgroundColor, leurs valeurs est de type string si ce n'est pas uniquement un chiffre.
 
 Voici quelques-unes des plus courantes :
 
