@@ -35,7 +35,7 @@ const container = useRef();
 
     useGSAP(
         () => {
-                gsap.to('.target', { x: 100 });
+                gsap.to(container.current.querySelector(".target"), { x: 100 });
         },[],//Le tableaux est vide , l'animation se joue a chaque rechargement de la page , ajoute un state dans le tableau si tu veux que l'animation joue a chaque changement d'etat.
         { scope: container }
     );
