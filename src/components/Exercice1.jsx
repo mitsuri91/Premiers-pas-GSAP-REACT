@@ -9,13 +9,13 @@ function Exercice1 (){
             <div id="rogersBox">
                 <figure >
                     <img src={Roger}  className="roger" alt="chicken in a box" />
-                    <figcaption>Roger avec useState {rogerCount}</figcaption>
-                    <button onClick={() => setRogerCount(rogerCount + 1)}>State + 1</button>
+                    <figcaption>Roger avec useState </figcaption>
+                    <button >State + 1</button>
                 </figure>
                 <figure >
                     <img src={Roger}  className="roger" alt="chicken in a box" />
                     <figcaption>Roger avec handler</figcaption>
-                    <button onClick={handleClick}>Click</button>
+                    <button >Click</button>
                 </figure>
             </div>
         </div>

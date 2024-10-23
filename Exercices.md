@@ -14,17 +14,17 @@ Anime nos deux Roger , l'un doit être animer a chaque changement d'état et l'a
    - Utilisez `useRef` pour créer deux références : `roger1` et `roger2`, utilise les pour bien référencer la première `<figure>` avec `roger1` et la deuxième avec `roger2`
 
 3. **Animation de roger1 :**
-   - roger1 est l'animation qui va jouer a chaque changement d'état de `rogerCount` et/ou rechargement de la page, nous allons donc coder toute notre animation dans le hook `useGSAP` qui devra se trouver dans ton composant.
+   - roger1 est l'animation qui va jouer a chaque changement d'état de `rogerCount` et/ou au rechargement de la page, nous allons donc coder toute notre animation dans le hook `useGSAP` qui devra se trouver dans ton composant.
 
    ```javascript  
     useGSAP(() => {
 
             // ton animation
 
-    }, [/*ton state a écouter*/], { scope: /*la ref a surveiller*/ });
+    }, [/*ton state a écouter*/]);
     ```
 
-   - Vérifie que l'animation se déclenche correctement uniquement sur la première figure.
+   - Vérifie que l'animation se déclenche correctement et uniquement sur la première figure.
 
 4. **Animation de roger2 :**
    - roger2 est l'animation qui va jouer uniquement au click , nous allons donc coder toute notre animation dans un handler associé a un contextSafe.  

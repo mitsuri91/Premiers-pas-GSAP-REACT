@@ -14,8 +14,7 @@
             text-align: center; 
             
             .roger {
-                width: 40vw;
-                max-width: 400px;
+                width: clamp(150px, 40vw, 400px);
             }
 
         }
